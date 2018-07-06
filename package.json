@@ -10,10 +10,9 @@
     "cubx-cache-config-generator": "bin/cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --ui bdd --recursive test/unit"
   },
-  "repository": {
-    "type": "git",
+  "repository":{
     "url": "git+https://github.com/cubbles/cubx-response-cache-config-generator.git"
   },
   "author": {

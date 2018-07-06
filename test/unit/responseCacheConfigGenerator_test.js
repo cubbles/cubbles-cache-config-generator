@@ -6,7 +6,7 @@
   const InputHandler = require('../../lib/inputHandler');
   const ArtifactsDepsResolver = require('cubx-dependency-resolver');
   const ManifestRequester = require('../../lib/manifestRequester');
-  describe('', function () {
+  describe('ResponseCacheConfigGenerator', function () {
     let responseCacheConfigGenerator;
     beforeEach(() => {
       responseCacheConfigGenerator = new ResponseCacheConfigGenerator();
