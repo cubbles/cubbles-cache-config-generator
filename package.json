@@ -1,0 +1,50 @@
+{
+  "name": "cubx-cache-config-generator",
+  "version": "1.0.0",
+  "description": "Generate the cubbles responseCache config for rte outgoing from root artifacts. ",
+  "engines": {
+    "node": ">=8.11.1"
+  },
+  "main": "lib/index.js",
+  "bin": {
+    "cubx-cache-config-generator": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cubbles/cubx-response-cache-config-generator.git"
+  },
+  "author": {
+    "name": "Judit Ross",
+    "email": "judit.ross@incowia.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cubbles/cubx-response-cache-config-generator/issues"
+  },
+  "keywords": [
+    "cubbles"
+  ],
+  "homepage": "https://github.com/cubbles/cubx-response-cache-config-generator#readme",
+  "dependencies": {
+    "ajv": "^6.5.2",
+    "axios": "^0.18.0",
+    "command-line-args": "^5.0.2",
+    "command-line-usage": "^5.0.5",
+    "cubx-dependency-resolver": "^1.1.0",
+    "fs-extra": "^6.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "chai-sinon": "^2.8.1",
+    "eslint": "^5.0.1",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "mocha": "^5.2.0",
+    "sinon": "^6.1.0",
+    "sinon-chai": "^3.2.0",
+    "standard": "^11.0.1"
+  }
+}
