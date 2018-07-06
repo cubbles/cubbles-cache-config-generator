@@ -1,6 +1,6 @@
 {
   "name": "cubx-cache-config-generator",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate the cubbles responseCache config for rte outgoing from root artifacts. ",
   "engines": {
     "node": ">=8.11.1"
@@ -12,8 +12,7 @@
   "scripts": {
     "test": "mocha --ui bdd --recursive test/unit",
     "lint": "eslint *.js lib/**/*.js test/**/*js",
-    "prepublish": "npm run lint"
-
+    "prepublish": "npm run lint && npm test"
   },
   "repository":{
     "url": "git+https://github.com/cubbles/cubx-response-cache-config-generator.git"
