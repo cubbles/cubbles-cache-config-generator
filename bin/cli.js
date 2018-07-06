@@ -5,13 +5,29 @@ const cliUsage = require('command-line-usage');
 const ResponseCacheConfigGenerator = require('../lib/responseCacheConfigGenerator.js');
 
 const args = [
-  {name: 'input', type: String, alias: 'i', description: 'Path to input file or json array of artifacts objects. Requiered'},
-  {name: 'output', type: String, alias: 'o', description: 'Path to output file. Optional, deafult is "responseCache.js"'},
-  {name: 'base-url', type: String, alias: 'b', camelCase: true, defaultValue: 'https://cubbles.world/sandbox', description: 'The base url for resolve dependencies of artifacts.'},
-  {name: 'help', type: Boolean, alias: 'h', description: 'Display this usage guide.'}
+  {
+    name: 'input',
+    type: String,
+    alias: 'i',
+    description: 'Path to input file or json array of artifacts objects. Requiered'
+  },
+  {
+    name: 'output',
+    type: String,
+    alias: 'o',
+    description: 'Path to output file. Optional, deafult is "responseCache.js"'
+  },
+  {
+    name: 'base-url',
+    type: String,
+    alias: 'b',
+    defaultValue: 'https://cubbles.world/sandbox',
+    description: 'The base url for resolve dependencies of artifacts.'
+  },
+  { name: 'help', type: Boolean, alias: 'h', description: 'Display this usage guide.' }
 ];
 
-const options = cliArgs(args);
+const options = cliArgs(args, { camelCase: true });
 
 const usageStrings = [
   {
@@ -39,7 +55,7 @@ if (!input) {
   message = 'The option --input is required.';
 }
 if (!baseUrl) {
-  if (message.length > 0) {
+  if (message && message.length > 0) {
     message = message + ' ';
   }
   message = message + '\'The option --base-url is required.';
@@ -56,12 +72,11 @@ if (!input || !baseUrl) {
   console.log(extendedUsage);
   process.exit(1);
 } else {
-  try {
-    const generator = new ResponseCacheConfigGenerator();
-    generator.generate(input, output, baseUrl);
+  const generator = new ResponseCacheConfigGenerator();
+  generator.generate(input, output, baseUrl).then(() => {
     process.exit();
-  } catch (e) {
-    console(e);
+  }).catch((e) => {
+    console.error(e);
     process.exit(1);
-  }
+  });
 }
