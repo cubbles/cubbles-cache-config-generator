@@ -47,10 +47,10 @@ oder
     
 **options**
 
-* -i/--input: artifact lists as a json or path to a json file contains an artifact list
-* -o/--output: path of the output file
-* -b/--base-url: cubbles base store url
-* --help
+* **-i/--input:** artifact lists as a json or path to a json file contains an artifact list
+* **-o/--output:** path of the output file
+* **-b/--base-url:** cubbles base store url
+* **--help**
 
 
 [travis-image]: https://travis-ci.org/cubbles/cubx-response-cache-config-generator.svg?branch=master
