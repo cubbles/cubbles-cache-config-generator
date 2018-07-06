@@ -1,13 +1,13 @@
 {
-  "name": "cubx-cache-config-generator",
-  "version": "1.0.2",
+  "name": "cubx-response-cache-config-generator",
+  "version": "1.0.3",
   "description": "Generate the cubbles responseCache config for rte outgoing from root artifacts. ",
   "engines": {
     "node": ">=8.11.1"
   },
-  "main": "lib/index.js",
+  "main": "lib/responseCacheConfigGenerator.js",
   "bin": {
-    "cubx-cache-config-generator": "bin/cli.js"
+    "cubx-response-cache-config-generator": "bin/cli.js"
   },
   "scripts": {
     "test": "mocha --ui bdd --recursive test/unit",
