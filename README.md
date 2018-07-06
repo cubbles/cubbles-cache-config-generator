@@ -1,4 +1,4 @@
-# cubbles-response-cache-config-generator
+# cubx-response-cache-config-generator
 
 [![npm][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
