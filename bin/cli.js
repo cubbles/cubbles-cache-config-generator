@@ -32,7 +32,7 @@ const options = cliArgs(args, { camelCase: true });
 const usageStrings = [
   {
     header: '<cubx-cache-config-generator> CLI',
-    content: 'Generate a file with a "window.cubx.CRCInit.responseCache" variable. The input is a list of root dependencies. [ {"artifactId": "my-artifact", "webpackageId": "my-webpackage@1.0.0"} ]'
+    content: 'Generate a file with a "window.cubx.CRCInit.responseCache" variable. The input is a list of root dependencies. \\[ \\{"artifactId": "my-artifact", "webpackageId": "my-webpackage@1.0.0"\\} \\]'
   },
   {
     header: 'Options',
@@ -56,9 +56,9 @@ if (!input) {
 }
 if (!baseUrl) {
   if (message && message.length > 0) {
-    message = message + ' ';
+    message = message + '; ';
   }
-  message = message + '\'The option --base-url is required.';
+  message = message + 'The option --base-url is required.';
 }
 if (!input || !baseUrl) {
   let extendUsageStrings = [
